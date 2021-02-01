@@ -1,0 +1,41 @@
+body {
+    max-width: 720px;
+    height   : auto;
+    margin   : 0 auto;
+    padding  : 10px;
+    position : relative;
+}
+
+.main>section {
+    margin-top: 20px;
+}
+
+hr {
+    margin-bottom: 12px;
+    border       : 1px solid lightgrey;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+ul {
+    margin-top: 4px;
+}
+
+ul li {
+    margin-top: 0;
+}
+
+ul ul {
+    margin-top   : 4px;
+    margin-bottom: 6px;
+}
+
+.left-navbar {
+    margin-left: -9px;
+}
+
+.btn.btn-link {
+    color: darkblue;
+}
