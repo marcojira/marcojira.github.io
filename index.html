@@ -29,41 +29,115 @@
                 <a href="#papers" class="btn btn-link">Papers</a>
                 <a href="#projects" class="btn btn-link">Projects</a>
                 <a href="#notes" class="btn btn-link">Notes</a>
-                <a href="#resume" class="btn btn-link">Resume</a>
+                <a href="https://scholar.google.com/citations?user=q2_P1YcAAAAJ&hl=en&oi=ao" class="btn btn-link">Google
+                    Scholar</a>
+                <a href="assets/Marco_Jiralerspong_CV.pdf" class="btn btn-link">CV</a>
             </section>
         </header>
 
-        <section id="about">
-            <p>Hi!</p>
+        <section id="about" class="columns">
+            <div class="column col-4" style="text-align: center;">
+                <img src="assets/headshot.jpg" alt="" style="border-radius: 50%; max-width: 90%; max-height: 90%;">
+            </div>
 
-            <p>I'm a master's student in computer science at Université de Montréal. My interests lie at the
-                intersection of computer science, economics and mathematics, specifically:</p>
-            <ul>
-                <li>Machine learning</li>
-                <li>Optimization</li>
-                <li>Algorithmic game theory</li>
-            </ul>
+            <div class="column col-8">
+                <p>Hi!</p>
+
+                <p>I'm a master's student in computer science at Université de Montréal. My interests lie at the
+                    intersection of <b>computer science</b>, <b>economics</b> and <b>mathematics</b>, specifically:</p>
+                <ul>
+                    <li>MARL (Multi-agent reinforcement learning)</li>
+                    <li>Algorithmic game theory</li>
+                    <li>Policy simulation</li>
+                </ul>
+            </div>
         </section>
 
         <section id="papers">
             <h3>Papers</h3>
             <hr>
 
-            <h6>Regret Dynamics in Online Clustering | <a href="assets/online_clustering_report.pdf">Paper</a>, <a
-                    href="assets/online_clustering_poster.pdf">Poster</a></h6>
-            <i class="coauthors">Marco Jiralerspong*, Andjela Mladenovic* and Gauthier Gidel</i>
-            <p>Analysis of regret dynamics of an online Follow-The-Leader (FTL) k-means algorithm and an online FTL
-                Gaussian Mixture Model (GMM).</p>
+            <div class="paper">
+                <h6 class="paper-title"> Feature Likelihood Score: Evaluating Generalization of Generative Models Using
+                    Samples </h6>
+                <p class="paper-authors">
+                    <b>Marco Jiralerspong</b>,
+                    Joey Bose,
+                    Ian Gemp,
+                    Chongli Qin,
+                    Yoram Bachrach,
+                    Gauthier Gidel
+                </p>
+                <p class="paper-subtitle">arXiv 2023 (under review).
+                </p>
+                <p class="paper-description">A novel likelihood-based metric for evaluating generative models which
+                    accounts for overfitting.</p>
+                <p class="paper-links"><a href="https://arxiv.org/abs/2302.04440">Paper</a>, <a
+                        href="https://github.com/marcojira/fls">Github</a></h6>
+                </p>
+            </div>
 
-            <h6>Comparison of Metrics Used in Generative Adversarial Networks | <a
-                    href="assets/COMP 598 - Final Paper.pdf">Paper</a></h6>
-            <p>Course project for COMP 598 (Mathematical Foundations for Machine Learning) comparing various metrics
-                used for the training of GANs.</p>
+            <div class="paper">
+                <h6 class="paper-title">Generating Diverse Vocal Bursts with StyleGAN2 and MEL-Spectrograms</h6>
+                <p class="paper-authors">
+                    <b>Marco Jiralerspong</b>,
+                    Gauthier Gidel
+                </p>
+                <p class="paper-subtitle">Expressive Vocalisation Workshop & Competition, ICML 2022.
+                </p>
+                <p class="paper-description">Training on StyleGAN2 on MEL-Spectrograms of vocal bursts to generate
+                    diverse samples corresponding to various emotions.</p>
+                <p class="paper-links"><a href="https://arxiv.org/abs/2206.12563">Paper</a>, <a
+                        href="https://github.com/marcojira/stylegan3-melspectrograms">Github</a></h6>
+                </p>
+            </div>
 
-            <h6>Neural Network Models for Inflation Rate Forecasting | <a
-                    href="assets/ECON 420 - Final Paper.pdf">Paper</a></h6>
-            <p>Course project for ECON 420 testing the performance of MLPs, RNNs and CNNs for inflation rate forecasting
-                from a relatively large macroeconomic dataset.</p>
+            <div class="paper">
+                <h6 class="paper-title">Regret Dynamics in Online Clustering</h6>
+                <p class="paper-authors">
+                    <b>Marco Jiralerspong*</b>,
+                    Andjela Mladenovic*
+                </p>
+                <p class="paper-subtitle">IFT 6269, Fall 2021
+                </p>
+                <p class="paper-description">Analysis of regret dynamics of an online Follow-The-Leader (FTL) k-means
+                    algorithm and an online FTL
+                    Gaussian Mixture Model (GMM).</p>
+                <p class="paper-links"><a href="assets/online_clustering_report.pdf">Paper</a>, <a
+                        href="assets/online_clustering_poster.pdf">Poster</a></h6>
+                </p>
+
+            </div>
+
+            <div class="paper">
+                <h6 class="paper-title">Comparison of Losses Used by Generative Adversarial Networks</h6>
+                <p class="paper-authors">
+                    <b>Marco Jiralerspong</b>
+                </p>
+                <p class="paper-subtitle">COMP 598, Fall 2019
+                </p>
+                <p class="paper-description">Course project for COMP 598 (Mathematical Foundations for Machine Learning)
+                    comparing various losses
+                    used for the training of GANs.</p>
+                <p class="paper-links"><a href="assets/COMP 598 - Final Paper.pdf">Paper</a></h6>
+                </p>
+
+            </div>
+
+            <!-- <div class="paper">
+                <h6 class="paper-title">Neural Network Models for Inflation Rate Forecasting</h6>
+                <p class="paper-authors">
+                    <b>Marco Jiralerspong</b>
+                </p>
+                <p class="paper-subtitle">ECON 420, Fall 2019
+                </p>
+                <p class="paper-description">Course project for ECON 420 testing the performance of MLPs, RNNs and CNNs
+                    for inflation rate forecasting
+                    from a relatively large macroeconomic dataset.</p>
+                <p class="paper-links"><a href="assets/ECON 420 - Final Paper.pdf">Paper</a></h6>
+                </p>
+
+            </div> -->
         </section>
 
         <section id="projects">
@@ -132,13 +206,6 @@
                 </li>
             </ul>
         </section>
-
-        <section id="resume">
-            <h3>Resume</h3>
-            <hr>
-            <a href="assets/Marco_Jiralerspong_Resume.pdf"><b>Marco_Jiralerspong_Resume.pdf</b></a>
-        </section>
-
     </div>
 
 </body>

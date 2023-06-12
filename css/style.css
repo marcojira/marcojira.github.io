@@ -1,9 +1,9 @@
 body {
     max-width: 720px;
-    height   : auto;
-    margin   : 0 auto;
-    padding  : 10px;
-    position : relative;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
 }
 
 .main>section {
@@ -12,7 +12,7 @@ body {
 
 hr {
     margin-bottom: 12px;
-    border       : 1px solid lightgrey;
+    border: 1px solid lightgrey;
 }
 
 p {
@@ -28,7 +28,7 @@ ul li {
 }
 
 ul ul {
-    margin-top   : 4px;
+    margin-top: 4px;
     margin-bottom: 6px;
 }
 
@@ -54,6 +54,34 @@ h6 {
     margin-top: 16px;
 }
 
-.coauthors {
+.paper-authors {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
+.paper {
+    margin-bottom: 16px;
+}
+
+.paper-title {
+    font-size: 18px;
+    /* font-weight: 400; */
+    margin-bottom: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.paper-subtitle {
+    font-weight: normal;
+    margin-bottom: 0px;
     font-size: 16px;
+}
+
+.paper-links {
+    margin-bottom: 0px;
+}
+
+.paper-description {
+    font-size: 15px;
+    margin-bottom: 0px;
 }
