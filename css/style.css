@@ -85,3 +85,7 @@ h6 {
     font-size: 15px;
     margin-bottom: 0px;
 }
+
+.icons a{
+    padding-right: 16px;
+}
