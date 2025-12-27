@@ -81,6 +81,14 @@ h6 {
     margin-bottom: 0px;
 }
 
+.github-link {
+    color: #1a5d1a;
+}
+
+.github-link:visited {
+    color: #1a5d1a;
+}
+
 .paper-description {
     font-size: 15px;
     margin-bottom: 0px;
