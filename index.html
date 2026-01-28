@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="css/spectre-exp.min.css">
     <link rel="stylesheet" href="css/spectre-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -41,7 +44,7 @@
 
         <section id="about" class="columns">
             <div class="column col-4" style="text-align: center;">
-                <img src="assets/headshot.jpg" alt="Marco Jiralerspong" style="border-radius: 50%; max-width: 90%; max-height: 90%;">
+                <img src="assets/headshot.jpg" alt="Marco Jiralerspong" class="headshot">
             </div>
 
             <div class="column col-8">
@@ -52,39 +55,53 @@
             </div>
         </section>
 
-        <section>
-                <p>I am currently working on soft variants of <b>reinforcement learning</b> and potential applications to
-                    <b>multi-agent problems</b>. In the past, I've worked on generative models and their evaluation.</p>
+        <section class="intro-box">
+                <p style="text-align: center;">I am currently working on soft variants of <b>reinforcement learning</b> and potential applications to
+                    <b>multi-agent problems</b>. However, any topic that bridges <b>computer science</b>, <b>economics</b> and
+                    <b>mathematics</b> will be of interest! </p>
 
-                    <p>Generally, any topic that bridges <b>computer science</b>, <b>economics</b> and
-                    <b>mathematics</b> will be of interest!</p>
-                <div class="icons" style="text-align: center;">
-                    <a id="email-link" href="" aria-label="Email"><i class="fas fa-envelope"></i> <span id="email-text"></span></a>
-                    <script>
-                        (function() {
-                            var u = 'marco.jiralerspong';
-                            var d = 'mila.quebec';
-                            var e = u + '@' + d;
-                            var a = document.getElementById('email-link');
-                            a.href = 'mailto:' + e;
-                            document.getElementById('email-text').textContent = e;
-                        })();
-                    </script>
-                    <a href="https://scholar.google.com/citations?user=q2_P1YcAAAAJ&hl=en&oi=ao"
-                        aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-                    <a href="https://github.com/marcojira" aria-label="Github"><i class="fab fa-github"></i> Github</a>
-                    <a href="https://twitter.com/marcojira" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                </div>
+                    <!-- #. In the past, I've worked on generative models and their evaluation.</p> -->
         </section>
+
+        <div class="icons" style="text-align: center;">
+            <a id="email-link" href="" aria-label="Email"><i class="fas fa-envelope"></i> <span id="email-text"></span></a>
+            <script>
+                (function() {
+                    var u = 'marco.jiralerspong';
+                    var d = 'mila.quebec';
+                    var e = u + '@' + d;
+                    var a = document.getElementById('email-link');
+                    a.href = 'mailto:' + e;
+                    document.getElementById('email-text').textContent = e;
+                })();
+            </script>
+            <a href="https://scholar.google.com/citations?user=q2_P1YcAAAAJ&hl=en&oi=ao"
+                aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+            <a href="https://github.com/marcojira" aria-label="Github"><i class="fab fa-github"></i> Github</a>
+            <a href="https://twitter.com/marcojira" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
 
         <section id="news">
             <h3>News</h3>
             <hr>
-            <ul>
-                <li><b>[August 2025]</b> Passed my Predoc 3 (proposal) exam!</li>
-                <li><b>[May 2025]</b> Received the FRQNT Doctoral Scholarship (declined).</li>
-                <li><b>[April 2025]</b> Received the NSERC Postgraduate Scholarship – Doctoral (PGS D). </li>
-            </ul>
+            <div class="news-timeline">
+                <div class="news-item">
+                    <span class="news-date">Jan 2026</span>
+                    <span class="news-content">Our paper "<a href="https://arxiv.org/abs/2506.17007">Discrete Compositional Generation via General Soft Operators and Robust Reinforcement Learning</a>" was accepted at ICLR 2026.</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Dec 2026</span>
+                    <span class="news-content">Released a preliminary version of <a href="https://github.com/marcojira/modrax">Modrax</a>, a modular library for RL in Jax using NNX.</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Aug 2025</span>
+                    <span class="news-content">Passed my Predoc 3 (proposal) exam!</span>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Apr 2025</span>
+                    <span class="news-content">Received the NSERC Postgraduate Scholarship – Doctoral (PGS D).</span>
+                </div>
+            </div>
         </section>
 
         <section id="papers">
@@ -93,75 +110,69 @@
 
 
             <div class="paper">
-                <h6 class="paper-title"><a href="https://arxiv.org/abs/2506.17007">1. Discrete Compositional Generation via General Soft Operators and Robust Reinforcement Learning</a> | <a href="https://github.com/marcojira/tgm" class="github-link"><i class="fab fa-github"></i> [Github]</a>
-                </h6>
-                <p class="paper-authors">
-                    <b>Marco Jiralerspong</b>,
-                    Esther Derman, Danilo Vucetic, Nikolay Malkin, Bilun Sun, Tianyu Zhang, Pierre-Luc Bacon, Gauthier Gidel
-                </p>
-                <p class="paper-subtitle">arXiv 2025 (under review).
-                </p>
+                <div class="paper-meta">
+                    <span class="paper-venue">ICLR 2026</span>
+                    <a href="https://github.com/marcojira/tgm" class="github-link"><i class="fab fa-github"></i> [Github]</a>
+                </div>
+                <div class="paper-content">
+                    <h6 class="paper-title"><a href="https://arxiv.org/abs/2506.17007">Discrete Compositional Generation via General Soft Operators and Robust Reinforcement Learning</a></h6>
+                    <p class="paper-authors">
+                        <b>Marco Jiralerspong</b>, Esther Derman, Danilo Vucetic, Nikolay Malkin, Bilun Sun, Tianyu Zhang, Pierre-Luc Bacon, Gauthier Gidel
+                    </p>
+                </div>
             </div>
 
 
+            <!-- <div class="paper">
+                <div class="paper-meta">
+                    <span class="paper-venue">NeurIPS 2024</span>
+                    <span class="paper-workshop">CRL Workshop</span>
+                </div>
+                <div class="paper-content">
+                    <h6 class="paper-title"><a href="https://arxiv.org/abs/2410.20647">General Causal Imputation via Synthetic Interventions</a></h6>
+                    <p class="paper-authors">
+                        <b>Marco Jiralerspong</b>, Thomas Jiralerspong, Vedant Shah, Dhanya Sridhar, Gauthier Gidel
+                    </p>
+                </div>
+            </div> -->
+
             <div class="paper">
-                <h6 class="paper-title"><a href="https://arxiv.org/abs/2410.20647">2. General Causal Imputation via Synthetic Interventions</a>
-                </h6>
-                <p class="paper-authors">
-                    <b>Marco Jiralerspong</b>,
-                    Thomas Jiralerspong,
-                    Vedant Shah,
-                    Dhanya Sridhar,
-                    Gauthier Gidel,
-                </p>
-                <p class="paper-subtitle">Workshop on Causal Representation Learning, NeurIPS 2024.
-                </p>
+                <div class="paper-meta">
+                    <span class="paper-venue">ICLR 2024</span>
+                    <a href="https://github.com/GFNOrg/AdversarialFlowNetworks" class="github-link"><i class="fab fa-github"></i> [Github]</a>
+                </div>
+                <div class="paper-content">
+                    <h6 class="paper-title"><a href="https://arxiv.org/abs/2310.02779">Expected Flow Networks in Stochastic Environments and Two-Player Zero-Sum Games</a></h6>
+                    <p class="paper-authors">
+                        <b>Marco Jiralerspong*</b>, Bilun Sun*, Danilo Vucetic*, Tianyu Zhang, Yoshua Bengio, Gauthier Gidel, Nikolay Malkin
+                    </p>
+                </div>
             </div>
 
             <div class="paper">
-                <h6 class="paper-title"><a href="https://arxiv.org/abs/2310.02779">3. Expected Flow Networks in Stochastic Environments and Two-Player Zero-Sum Games</a> | <a href="https://github.com/GFNOrg/AdversarialFlowNetworks" class="github-link"><i class="fab fa-github"></i> [Github]</a>
-                </h6>
-                <p class="paper-authors">
-                    <b>Marco Jiralerspong*</b>,
-                    Bilun Sun*,
-                    Danilo Vucetic*,
-                    Tianyu Zhang,
-                    Yoshua Bengio,
-                    Gauthier Gidel,
-                    Nikolay Malkin
-                </p>
-                <p class="paper-subtitle">ICLR 2024.
-                </p>
+                <div class="paper-meta">
+                    <span class="paper-venue">ICLR 2024</span>
+                    <span class="paper-workshop">Spotlight</span>
+                </div>
+                <div class="paper-content">
+                    <h6 class="paper-title"><a href="https://arxiv.org/abs/2310.00429">On the Stability of Iterative Retraining of Generative Models on their own Data</a></h6>
+                    <p class="paper-authors">
+                        Quentin Bertrand, Joey Bose, Alexandre Duplessis, <b>Marco Jiralerspong</b>, Gauthier Gidel
+                    </p>
+                </div>
             </div>
 
             <div class="paper">
-                <h6 class="paper-title"><a href="https://arxiv.org/abs/2310.00429">4. On the Stability of Iterative Retraining of Generative Models on their own Data</a>
-                </h6>
-                <p class="paper-authors">
-                    Quentin Bertrand,
-                    Joey Bose,
-                    Alexandre Duplessis,
-                    <b>Marco Jiralerspong</b>,
-                    Gauthier Gidel
-                </p>
-                <p class="paper-subtitle">ICLR 2024 (spotlight).
-                </p>
-            </div>
-
-            <div class="paper">
-                <h6 class="paper-title"><a href="https://arxiv.org/abs/2302.04440">5. Feature Likelihood Divergence: Evaluating the Generalization of Generative
-                    Models Using
-                    Samples</a> | <a href="https://github.com/marcojira/fld" class="github-link"><i class="fab fa-github"></i> [Github]</a></h6>
-                <p class="paper-authors">
-                    <b>Marco Jiralerspong</b>,
-                    Joey Bose,
-                    Ian Gemp,
-                    Chongli Qin,
-                    Yoram Bachrach,
-                    Gauthier Gidel
-                </p>
-                <p class="paper-subtitle">NeurIPS 2023.
-                </p>
+                <div class="paper-meta">
+                    <span class="paper-venue">NeurIPS 2023</span>
+                    <a href="https://github.com/marcojira/fld" class="github-link"><i class="fab fa-github"></i> [Github]</a>
+                </div>
+                <div class="paper-content">
+                    <h6 class="paper-title"><a href="https://arxiv.org/abs/2302.04440">Feature Likelihood Divergence: Evaluating the Generalization of Generative Models Using Samples</a></h6>
+                    <p class="paper-authors">
+                        <b>Marco Jiralerspong</b>, Joey Bose, Ian Gemp, Chongli Qin, Yoram Bachrach, Gauthier Gidel
+                    </p>
+                </div>
             </div>
 
             <!-- <div class="paper">
@@ -230,10 +241,17 @@
         <section id="awards">
             <h3>Awards</h3>
             <hr>
-            <ul>
-                <li><b>NSERC Postgraduate Scholarship – Doctoral (PGS D):</b> $40 000/year.</li>
-                <li><b>FRQNT Doctoral Scholarship (declined):</b> $25 000/year.</li>
-            </ul>
+            <div class="award-list">
+                <div class="award-item">
+                    <span class="award-name">NSERC Postgraduate Scholarship – Doctoral (PGS D):</span>
+                    <span class="award-amount">$40,000/year</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-name">FRQNT Doctoral Scholarship:</span>
+                    <span class="award-amount">$25,000/year</span>
+                    <span class="award-note">(declined)</span>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
